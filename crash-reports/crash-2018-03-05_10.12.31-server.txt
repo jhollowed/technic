@@ -1,0 +1,116 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 3/5/18 10:12 AM
+Description: Exception in server tick loop
+
+java.lang.NullPointerException: Exception in server tick loop
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:1016)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:432)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:841)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:693)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Thermos Version: cyberdynecc:Thermos:1.7.10-1614.57
+	Plugins: 
+	Disabled Plugins: PermissionsEx, Essentials
+	Operating System: Linux (amd64) version 4.4.0-116-generic
+	Java Version: 1.8.0_151, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 154481552 bytes (147 MB) / 964165632 bytes (919 MB) up to 964165632 bytes (919 MB)
+	JVM Flags: 2 total; -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 96
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 78 mods loaded, 78 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (Thermos-1.7.10-1448-57-server.jar) 
+	UCHIJAAAA	Forge{10.13.4.1614} [Minecraft Forge] (Thermos-1.7.10-1448-57-server.jar) 
+	UCHIJAAAA	kimagine{0.2} [KImagine] (minecraft.jar) 
+	UCHIJAAAA	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAA	ImmibisMicroblocks{59.1.2} [Immibis's Microblocks] (immibis-microblocks-59.1.2.jar) 
+	UCHIJAAAA	Micdoodlecore{} [Micdoodle8 Core] (minecraft.jar) 
+	UCHIJAAAA	NotEnoughItems{1.0.5.111} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.5.111-universal.jar) 
+	UCHIJAAAA	OpenComputers|Core{1.7.1.1127} [OpenComputers (Core)] (minecraft.jar) 
+	UCHIJAAAA	<CoFH ASM>{000} [CoFH ASM] (minecraft.jar) 
+	UCHIJAAAA	bspkrsCore{6.16} [bspkrsCore] ([1.7.10]bspkrsCore-universal-6.16.jar) 
+	UCHIJAAAA	Treecapitator{1.7.10} [Treecapitator] ([1.7.10]Treecapitator-universal-2.0.4.jar) 
+	UCHIJAAAA	CoFHCore{1.7.10R3.1.4} [CoFH Core] (CoFHCore-[1.7.10]3.1.4-329.jar) 
+	UCHIJAAAA	BuildCraft|Core{7.1.23} [BuildCraft] (buildcraft-7.1.23.jar) 
+	UCHIJAAAA	BuildCraft|Transport{7.1.23} [BC Transport] (buildcraft-7.1.23.jar) 
+	UCHIJAAAA	BuildCraft|Factory{7.1.23} [BC Factory] (buildcraft-7.1.23.jar) 
+	UCHIJAAAA	BuildCraft|Silicon{7.1.23} [BC Silicon] (buildcraft-7.1.23.jar) 
+	UCHIJAAAA	additionalpipes{4.7.7} [Additional Pipes] (additionalpipes-4.7.7.jar) 
+	UCHIJAAAA	IC2{2.2.823-experimental} [IndustrialCraft 2] (industrialcraft-2-2.2.823-experimental.jar) 
+	UCHIJAAAA	ImmibisCore{59.1.4} [Immibis Core] (immibis-core-59.1.4.jar) 
+	UCHIJAAAA	AdvancedRepulsionSystems{59.0.4} [Advanced Repulsion Systems] (adv-repulsion-systems-59.0.4.jar) 
+	UCHIJAAAA	AdvancedMachines{1.1.6} [IC2 Advanced Machines Addon] (AdvancedMachinesAS-1.7.10.jar) 
+	UCHIJAAAA	BuildCraft|Robotics{7.1.23} [BC Robotics] (buildcraft-7.1.23.jar) 
+	UCHIJAAAA	BuildCraft|Energy{7.1.23} [BC Energy] (buildcraft-7.1.23.jar) 
+	UCHIJAAAA	BuildCraft|Builders{7.1.23} [BC Builders] (buildcraft-7.1.23.jar) 
+	UCHIJAAAA	BuildCraft|Compat{7.1.7} [BuildCraft Compat] (buildcraft-compat-7.1.7.jar) 
+	UCHIJAAAA	CompactSolars{4.4.39.315} [Compact Solar Arrays] (CompactSolars-1.7.10-4.4.39.315-universal.jar) 
+	UCHIJAAAA	ComputerCraft{1.74} [ComputerCraft] (ComputerCraftPlusComputerCraftEdu1.74.jar) 
+	UCHIJAAAA	ComputerCraftEdu{1.74} [ComputerCraftEdu] (ComputerCraftPlusComputerCraftEdu1.74.jar) 
+	UCHIJAAAA	cosmeticarmorreworked{1.7.10-v6b} [CosmeticArmorReworked] (CosmeticArmorReworked-1.7.10-v6b.jar) 
+	UCHIJAAAA	EnderStorage{1.4.7.37} [EnderStorage] (EnderStorage-1.7.10-1.4.7.37-universal.jar) 
+	UCHIJAAAA	GalacticraftCore{3.0.12} [Galacticraft Core] (GalacticraftCore-1.7-3.0.12.503.jar) 
+	UCHIJAAAA	GalacticraftMars{3.0.12} [Galacticraft Planets] (Galacticraft-Planets-1.7-3.0.12.503.jar) 
+	UCHIJAAAA	ExtraPlanets{1.7.10-1.9.8} [Extra Planets] (ExtraPlanets-1.7.10-1.9.8.jar) 
+	UCHIJAAAA	fc-dummy{0} [fc-dummy] (fastcraft-1.25.jar) 
+	UCHIJAAAA	IC2NuclearControl{2.4.3a} [Nuclear Control 2] (IC2NuclearControl-2.4.3a.jar) 
+	UCHIJAAAA	ImmibisMacroblocks{59.1.1} [Immibis's Macroblocks] (immibis-macroblocks-59.1.1.jar) 
+	UCHIJAAAA	ImmibisPeripherals{59.0.3} [Immibis's Peripherals] (immibis-peripherals-59.0.3.jar) 
+	UCHIJAAAA	inventorytweaks{1.59-dev-152-cf6e263} [Inventory Tweaks] (InventoryTweaks-1.59-dev-152.jar) 
+	UCHIJAAAA	IronChest{6.0.62.742} [Iron Chest] (ironchest-1.7.10-6.0.62.742-universal.jar) 
+	UCHIJAAAA	NEIAddons{1.12.14.40} [NEI Addons] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHIJAAAA	NEIAddons|Developer{1.12.14.40} [NEI Addons: Developer Tools] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHIJAAAA	NEIAddons|AppEng{1.12.14.40} [NEI Addons: Applied Energistics 2] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHIJAAAA	NEIAddons|Botany{1.12.14.40} [NEI Addons: Botany] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHIJAAAA	NEIAddons|Forestry{1.12.14.40} [NEI Addons: Forestry] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHIJAAAA	NEIAddons|CraftingTables{1.12.14.40} [NEI Addons: Crafting Tables] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHIJAAAA	NEIAddons|ExNihilo{1.12.14.40} [NEI Addons: Ex Nihilo] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHIJAAAA	neiintegration{1.0.12} [NEI Integration] (NEIIntegration-MC1.7.10-1.0.12.jar) 
+	UCHIJAAAA	NEIPlugins{1.1.0.9-unofficial} [NEI Plugins Unofficial] (NEIPlugins-MC1.7.10-1.1.0.9-unofficial.jar) 
+	UCHIJAAAA	NetherOres{1.7.10R2.3.1} [Nether Ores] (NetherOres-[1.7.10]2.3.1-22.jar) 
+	UCHIJAAAA	OCS{1.7.5} [OpenCCSensors] (openccsensors-1.7.5.jar) 
+	UCHIJAAAA	ForgeMultipart{1.2.0.345} [Forge Multipart] (ForgeMultipart-1.7.10-1.2.0.345-universal.jar) 
+	UCHIJAAAA	MrTJPCoreMod{1.1.0.33} [MrTJPCore] (MrTJPCore-1.7.10-1.1.0.33-universal.jar) 
+	UCHIJAAAA	ProjRed|Core{4.7.0pre12.95} [ProjectRed Core] (ProjectRed-1.7.10-4.7.0pre12.95-Base.jar) 
+	UCHIJAAAA	ProjRed|Transmission{4.7.0pre12.95} [ProjectRed Transmission] (ProjectRed-1.7.10-4.7.0pre12.95-Integration.jar) 
+	UCHIJAAAA	OpenComputers{1.7.1.1127} [OpenComputers] (OpenComputers-MC1.7.10-1.7.1.1127-universal.jar) 
+	UCHIJAAAA	PowerUtils{1.7.10-1.0.4} [PowerUtils] (PowerUtils-1.7.10-1.0.4.jar) 
+	UCHIJAAAA	ProjectE{1.7.10-PE1.10.1} [ProjectE] (ProjectE-1.7.10-PE1.10.1.jar) 
+	UCHIJAAAA	ProjRed|Transportation{4.7.0pre12.95} [ProjectRed Transportation] (ProjectRed-1.7.10-4.7.0pre12.95-Mechanical.jar) 
+	UCHIJAAAA	ProjRed|Exploration{4.7.0pre12.95} [ProjectRed Exploration] (ProjectRed-1.7.10-4.7.0pre12.95-World.jar) 
+	UCHIJAAAA	ProjRed|Compatibility{4.7.0pre12.95} [ProjectRed Compatibility] (ProjectRed-1.7.10-4.7.0pre12.95-Compat.jar) 
+	UCHIJAAAA	ProjRed|Integration{4.7.0pre12.95} [ProjectRed Integration] (ProjectRed-1.7.10-4.7.0pre12.95-Integration.jar) 
+	UCHIJAAAA	ProjRed|Fabrication{4.7.0pre12.95} [ProjectRed Fabrication] (ProjectRed-1.7.10-4.7.0pre12.95-Fabrication.jar) 
+	UCHIJAAAA	ProjRed|Illumination{4.7.0pre12.95} [ProjectRed Illumination] (ProjectRed-1.7.10-4.7.0pre12.95-Lighting.jar) 
+	UCHIJAAAA	ProjRed|Expansion{4.7.0pre12.95} [ProjectRed Expansion] (ProjectRed-1.7.10-4.7.0pre12.95-Mechanical.jar) 
+	UCHIJAAAA	Railcraft{9.12.2.0} [Railcraft] (Railcraft_1.7.10-9.12.2.0.jar) 
+	UCHIJAAAA	RWG{Alpha 1.3.2} [Realistic World Gen Alpha] (RWG-alpha-1.3.2.jar) 
+	UCHIJAAAA	Tubestuff{59.0.4} [Tubestuff] (tubestuff-59.0.4.jar) 
+	UCHIJAAAA	Waila{1.5.10} [Waila] (Waila-1.5.10_1.7.10.jar) 
+	UCHIJAAAA	worldedit{6.1.1} [WorldEdit] (worldedit-forge-mc1.7.10-6.1.1-dist.jar) 
+	UCHIJAAAA	WR-CBE|Core{1.4.1.9} [WR-CBE Core] (WR-CBE-1.7.10-1.4.1.9-universal.jar) 
+	UCHIJAAAA	WR-CBE|Addons{1.4.1.9} [WR-CBE Addons] (WR-CBE-1.7.10-1.4.1.9-universal.jar) 
+	UCHIJAAAA	WR-CBE|Logic{1.4.1.9} [WR-CBE Logic] (WR-CBE-1.7.10-1.4.1.9-universal.jar) 
+	UCHIJAAAA	McMultipart{1.2.0.345} [Minecraft Multipart Plugin] (ForgeMultipart-1.7.10-1.2.0.345-universal.jar) 
+	UCHIJAAAA	ForgeRelocation{0.0.1.4} [ForgeRelocation] (ForgeRelocation-1.7.10-0.0.1.4-universal.jar) 
+	UCHIJAAAA	MCFrames{1.0} [MCFrames] (ForgeRelocation-1.7.10-0.0.1.4-universal.jar) 
+	UCHIJAAAA	RelocationFMP{0.0.1.2} [RelocationFMP] (ForgeRelocationFMP-1.7.10-0.0.1.2-universal.jar) 
+	UCHIJAAAA	ForgeMicroblock{1.2.0.345} [Forge Microblocks] (ForgeMultipart-1.7.10-1.2.0.345-universal.jar) 
+	CoFHCore: -[1.7.10]3.1.4-329
+	NetherOres: -[1.7.10]2.3.1-22
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 20; []
+	Is Modded: Definitely; Server brand changed to 'thermos,cauldron,craftbukkit,mcpc,kcauldron,fml,forge'
+	Type: Dedicated Server (map_server.txt)
