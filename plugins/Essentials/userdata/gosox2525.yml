@@ -1,12 +1,12 @@
 uuid: 6c41296d-27ce-3ba0-9736-e2b816a1c3bb
 timestamps:
-  login: 1520478340004
-  logout: 1520491210992
+  login: 1521996745337
+  logout: 1522002960780
 ipAddress: 25.87.150.233
 logoutlocation:
   world: J&J
-  x: -422.5
-  y: 66.0
-  z: -521.5
-  yaw: -79.99702
-  pitch: 24.299963
+  x: 1634.4815395773044
+  y: 75.0
+  z: -981.2281889072899
+  yaw: 239.50623
+  pitch: 20.250015

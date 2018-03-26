@@ -11,9 +11,6 @@
 # Forums: http://www.spigotmc.org/forum/
 
 config-version: 7
-commands:
-  log: true
-  tab-complete: true
 settings:
   fullMatchRate: 10
   bungeecord: false
@@ -24,6 +21,9 @@ settings:
   restart-script: ./start.sh
   netty-threads: -1
   player-shuffle: 0
+commands:
+  log: true
+  tab-complete: true
 messages:
   restart: Server is restarting
   whitelist: You are not whitelisted on this server!
@@ -37,6 +37,21 @@ stats:
 world-settings:
   default:
     verbose: false
+    mob-spawn-range: 4
+    entity-tracking-range:
+      players: 48
+      animals: 48
+      monsters: 48
+      misc: 32
+      other: 64
+    growth:
+      cactus-modifier: 100
+      cane-modifier: 100
+      melon-modifier: 100
+      mushroom-modifier: 100
+      pumpkin-modifier: 100
+      sapling-modifier: 100
+      wheat-modifier: 100
     merge-radius:
       item: 2.5
       exp: 3.0
@@ -60,15 +75,6 @@ world-settings:
       replace-blocks:
       - 1
       - 5
-    nerf-spawner-mobs: false
-    growth:
-      cactus-modifier: 100
-      cane-modifier: 100
-      melon-modifier: 100
-      mushroom-modifier: 100
-      pumpkin-modifier: 100
-      sapling-modifier: 100
-      wheat-modifier: 100
     entity-activation-range:
       animals: 32
       monsters: 32
@@ -84,13 +90,7 @@ world-settings:
       tile: 1000
       entity: 1000
     max-tnt-per-tick: 100
-    entity-tracking-range:
-      players: 48
-      animals: 48
-      monsters: 48
-      misc: 32
-      other: 64
-    mob-spawn-range: 4
+    nerf-spawner-mobs: false
     chunks-per-tick: 650
     clear-tick-list: false
     use-async-lighting: true

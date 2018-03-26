@@ -109,8 +109,8 @@ world-settings:
     entity-despawn-immediate: false
     worldgen-CoFHCore-WorldHandler: true
     worldgen-IC2-IC2: true
-    worldgen-GalacticraftCore-OverworldGenerator: true
     worldgen-MrTJPCoreMod-SimpleGenHandler$: true
+    worldgen-GalacticraftCore-OverworldGenerator: true
   max-players-visible: -1
   use-real-names: false
 protection:
