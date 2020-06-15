@@ -18,12 +18,12 @@ messages:
   outdated-client: Outdated client! Please use {}
   outdated-server: Outdated server! I'm still on {}
   restart: Server is restarting
-commands:
-  tab-complete: true
-  log: true
+stats:
+  disable-saving: false
+  forced-stats: {}
 settings:
-  player-shuffle: 0
   fullMatchRate: 10
+  player-shuffle: 0
   bungeecord: false
   late-bind: false
   sample-count: 12
@@ -31,19 +31,30 @@ settings:
   restart-on-crash: true
   restart-script: ./start.sh
   netty-threads: -1
-stats:
-  disable-saving: false
-  forced-stats: {}
+commands:
+  tab-complete: true
+  log: true
 world-settings:
   default:
     verbose: false
-    view-distance: 10
-    item-despawn-rate: 6000
+    enable-zombie-pigmen-portal-spawns: true
     chunks-per-tick: 650
     clear-tick-list: false
     merge-radius:
-      item: 2.5
       exp: 3.0
+      item: 2.5
+    use-async-lighting: true
+    entity-tracking-range:
+      players: 48
+      animals: 48
+      monsters: 48
+      misc: 32
+      other: 64
+    view-distance: 10
+    item-despawn-rate: 6000
+    zombie-aggressive-towards-villager: true
+    arrow-despawn-rate: 1200
+    mob-spawn-range: 4
     anti-xray:
       enabled: true
       engine-mode: 1
@@ -64,7 +75,7 @@ world-settings:
       replace-blocks:
       - 1
       - 5
-    use-async-lighting: true
+    nerf-spawner-mobs: false
     growth:
       cactus-modifier: 100
       cane-modifier: 100
@@ -77,22 +88,11 @@ world-settings:
       animals: 32
       monsters: 32
       misc: 16
-    nerf-spawner-mobs: false
-    zombie-aggressive-towards-villager: true
-    arrow-despawn-rate: 1200
-    enable-zombie-pigmen-portal-spawns: true
-    mob-spawn-range: 4
     ticks-per:
       hopper-transfer: 8
       hopper-check: 8
     random-light-updates: false
     save-structure-info: true
-    entity-tracking-range:
-      players: 48
-      animals: 48
-      monsters: 48
-      misc: 32
-      other: 64
     max-bulk-chunks: 5
     max-entity-collisions: 8
     max-tick-time:
