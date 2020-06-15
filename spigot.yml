@@ -12,6 +12,7 @@
 
 config-version: 7
 settings:
+  player-shuffle: 0
   fullMatchRate: 10
   bungeecord: false
   late-bind: false
@@ -20,17 +21,16 @@ settings:
   restart-on-crash: true
   restart-script: ./start.sh
   netty-threads: -1
-  player-shuffle: 0
-commands:
-  log: true
-  tab-complete: true
 messages:
-  restart: Server is restarting
   whitelist: You are not whitelisted on this server!
   unknown-command: Unknown command. Type "/help" for help.
   server-full: The server is full!
   outdated-client: Outdated client! Please use {}
   outdated-server: Outdated server! I'm still on {}
+  restart: Server is restarting
+commands:
+  tab-complete: true
+  log: true
 stats:
   disable-saving: false
   forced-stats: {}
